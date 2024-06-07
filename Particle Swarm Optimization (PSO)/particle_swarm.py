@@ -23,7 +23,7 @@ def pso(function, dimension, num_particles, lower_limit, upper_limit, w, c1, c2,
         positions, velocities = update_velocities_positions(positions, velocities, personal_best_positions, global_best_position, w, c1, c2, lower_limit, upper_limit)
         
         all_iterations_values.append(global_best_value)
-    
+
         all_iterations_positions.append([pos.copy() for pos in positions])
     
 

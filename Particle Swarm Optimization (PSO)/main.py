@@ -6,11 +6,11 @@ from functions import function
 from random_search_pso import random_search_pso
 
 # Parâmetros do PSO
-dimension = 2
+dimension = 100
 num_particles = 30
 lower_limit = -2.048
 upper_limit = 2.048
-max_iter = 100
+max_iter = 10000
 executions_num = 100
 
 # Best parameters 2 dim
@@ -29,8 +29,9 @@ c2 = 1.6587772220768413
 #c2 = 1.6487351502210512
 
 def main():
-
-    #w, c1, c2, global_best = random_search_pso(function, dimension, num_particles, lower_limit, upper_limit, max_iter, executions_num)
+    
+    w, c1, c2, global_best = random_search_pso(function, dimension, num_particles, lower_limit, upper_limit, max_iter, executions_num)
+    
     generate_gif(pso,dimension,num_particles,max_iter,lower_limit,upper_limit,w,c1,c2,function)
     
 
